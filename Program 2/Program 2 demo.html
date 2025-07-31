@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Random Numbers</h2>
+    <button onclick="generate()">Submit</button>
+    <br />
+    <div id="output"></div>
+
+    <script>
+      function generate() {
+        let randomnumber = Math.floor(Math.random() * 100) + 1;
+        document.getElementById("output").innerText = randomNumber;
+      }
+    </script>
+  </body>
+</html>
