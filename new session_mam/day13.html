@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try{
+            //code that may throw an error
+        }catch(error){
+            //code to handle the error
+        } finally{
+            //code that will always excute
+        }
+
+        //example
+
+        try{
+            let atmpin=2345;
+            if(atmpin ==1234){;
+            throw "you entered wrong pin!";
+            }
+            console.log("you entered correct pin!");
+        }
+        catch(error){
+            console.log(" "+error)
+        }
+        finally{
+            console.log("excution finished...")
+        }
+
+        //definition:
+        //JSON.parse()->Converts a JSON string into a Javascript object.
+        //JSON.stringify()->converts a Javascript object into a JSON string.
+
+        let jsonstring='{"name":"java"}';
+        let stredstring=JSON.parse(jsonstring);
+        console.log(stredstring);
+
+        let obj={name:"js"};
+        let stredobj=JSON.stringify(obj);
+        console.log(stredobj)
+
+        fetch("data.json")
+        .then(res=>res.json())
+        .then(data=>{
+            for(let students of data.student){
+                console.log(students.name+" ",students.id)
+            }
+        })
+
+
+    </script>
+</body>
+</html>
