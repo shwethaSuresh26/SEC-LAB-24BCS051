@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <script>
+        //Quantifers specify how many times a charaters or group should appear
+        let text ="Rajish thala";
+        let pattern =/\a?/;
+        let result = text.match(pattern);
+        console.log(result);
+
+        let text2="Hai How are you ?\nHai";
+        let pattern2=/^hai/igm;
+        let result2=text2.match(pattern2);
+        console.log(result2);
+        
+        let number = "2468abcdef";
+        let pattern3=/\d+\w+/g;
+        let result4=number.match(pattern3);
+        console.log(result4);
+
+        //test()
+        //exec()
+        //match()
+        //replace()
+        //split()
+
+        let text4 ="Hai Kavikuyul";
+        let pattern5 =/(\w+)\s+(\w+)/;
+        let result6=text4.match(pattern5);
+        console.log(result6);
+        console.log(result6[0]);
+        console.log(result6[1]);
+        console.log(result6[2]);
+
+
+    </script>
+</body>
+</html>
